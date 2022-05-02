@@ -196,6 +196,10 @@ class Services extends Component
             ->section('content') ;;
     }
 
+    /**
+     * Paginación
+     * @return string
+     */
     public function paginationView()
     {
         return 'vendor.livewire.bootstrap';
@@ -206,6 +210,7 @@ class Services extends Component
      */
     public function Store(){
 
+        // Creando reglas de validación
         $rules =[
             'code_ops' => 'required',
             'operation_id' => 'required|not_in:Seleccionar operación',
